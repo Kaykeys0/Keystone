@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marks Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="chart.min.js"></script>
+</head>
+<body>
+  <!-- Login Page -->
+  <div id="login-page" class="page">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <p id="login-error"></p>
+    </form>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="page hidden">
+    <h2>Student Marks Dashboard</h2>
+    <form id="marks-form">
+      <input type="text" id="student-name" placeholder="Student Name" required>
+      <div id="subjects">
+        <input type="number" placeholder="Maths" required>
+        <input type="number" placeholder="English" required>
+        <input type="number" placeholder="Science" required>
+        <input type="number" placeholder="History" required>
+        <input type="number" placeholder="Geography" required>
+      </div>
+      <button type="submit">Add Student</button>
+    </form>
+
+    <h3>Report</h3>
+    <table id="report-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Total</th>
+          <th>Average</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p id="class-average"></p>
+    <canvas id="marksChart"></canvas>
+
+    <button id="export-pdf">Export as PDF</button>
+    <button id="clear-data">Clear Data</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
